@@ -130,7 +130,7 @@ export const CollectionTable = () => {
               padding: "0.5vh 0 3vh 0",
             }}
           >
-            Name
+            ABC
           </Text>
         </ListItem>
 
@@ -144,11 +144,19 @@ export const CollectionTable = () => {
             style={{
               textAlign: "center",
               overflowWrap: "break-word",
-              padding: "3vh 2vw",
-              marginTop: "2vh",
+              padding: "3vh 2vw 0 2vw",
             }}
           >
-            Listings
+            10K
+          </Text>
+          <Text
+            style={{
+              textAlign: "center",
+              overflowWrap: "break-word",
+              padding: "0.5vh 0 3vh 0",
+            }}
+          >
+            377
           </Text>
         </ListItem>
 
@@ -162,11 +170,19 @@ export const CollectionTable = () => {
             style={{
               textAlign: "center",
               overflowWrap: "break-word",
-              padding: "3vh 2vw",
-              marginTop: "2vh",
+              padding: "3vh 2vw 0 2vw",
             }}
           >
-            Floor
+            Sol
+          </Text>
+          <Text
+            style={{
+              textAlign: "center",
+              overflowWrap: "break-word",
+              padding: "0.5vh 0 3vh 0",
+            }}
+          >
+            {(29.615).toFixed(2)}
           </Text>
         </ListItem>
         <ListItem
@@ -179,11 +195,19 @@ export const CollectionTable = () => {
             style={{
               textAlign: "center",
               overflowWrap: "break-word",
-              padding: "3vh 2vw",
-              marginTop: "2vh",
+              padding: "3vh 2vw 0 2vw",
             }}
           >
-            Offer
+            Sol
+          </Text>
+          <Text
+            style={{
+              textAlign: "center",
+              overflowWrap: "break-word",
+              padding: "0.5vh 0 3vh 0",
+            }}
+          >
+            {(27.965).toFixed(2)}
           </Text>
         </ListItem>
         <ListItem
@@ -196,11 +220,19 @@ export const CollectionTable = () => {
             style={{
               textAlign: "center",
               overflowWrap: "break-word",
-              padding: "3vh 2vw",
-              marginTop: "2vh",
+              padding: "3vh 2vw 0 2vw",
             }}
           >
-            TVL
+            Sol
+          </Text>
+          <Text
+            style={{
+              textAlign: "center",
+              overflowWrap: "break-word",
+              padding: "0.5vh 0 3vh 0",
+            }}
+          >
+            {(2649.694 / 1000).toFixed(2)}K
           </Text>
         </ListItem>
       </List>
