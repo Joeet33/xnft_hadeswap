@@ -1,5 +1,5 @@
 import React from "react";
-import { List, ListItem, Text } from "react-xnft";
+import { Image, List, ListItem, Text } from "react-xnft";
 
 export const CollectionTable = () => {
   return (
@@ -110,24 +110,21 @@ export const CollectionTable = () => {
           style={{
             width: "16vw",
             height: "fit-content",
-            display: "flex",
-            flexDirection: "column",
+            textAlign:"center"
           }}
         >
-          <Text
+          <Image
             style={{
-              textAlign: "center",
-              overflowWrap: "break-word",
-              padding: "3vh 2vw 0 2vw",
+              width: "8vw",
+              padding: "3.5vh 2vw 0.5vh 2vw",
             }}
-          >
-            Img
-          </Text>
+            src={"https://cryptologos.cc/logos/solana-sol-logo.png"}
+          />
           <Text
             style={{
               textAlign: "center",
               overflowWrap: "break-word",
-              padding: "0.5vh 0 3vh 0",
+              paddingBottom: "3vh",
             }}
           >
             ABC
@@ -164,22 +161,21 @@ export const CollectionTable = () => {
           style={{
             width: "16vw",
             height: "fit-content",
+            textAlign: "center",
           }}
         >
-          <Text
+          <Image
             style={{
-              textAlign: "center",
-              overflowWrap: "break-word",
-              padding: "3vh 2vw 0 2vw",
+              width: "8vw",
+              padding: "3.5vh 2vw 0.5vh 2vw",
             }}
-          >
-            Sol
-          </Text>
+            src={"https://cryptologos.cc/logos/solana-sol-logo.png"}
+          />
           <Text
             style={{
               textAlign: "center",
               overflowWrap: "break-word",
-              padding: "0.5vh 0 3vh 0",
+              paddingBottom: "3vh",
             }}
           >
             {(29.615).toFixed(2)}
@@ -189,22 +185,21 @@ export const CollectionTable = () => {
           style={{
             width: "16vw",
             height: "fit-content",
+            textAlign: "center",
           }}
         >
-          <Text
+          <Image
             style={{
-              textAlign: "center",
-              overflowWrap: "break-word",
-              padding: "3vh 2vw 0 2vw",
+              width: "8vw",
+              padding: "3.5vh 2vw 0.5vh 2vw",
             }}
-          >
-            Sol
-          </Text>
+            src={"https://cryptologos.cc/logos/solana-sol-logo.png"}
+          />
           <Text
             style={{
               textAlign: "center",
               overflowWrap: "break-word",
-              padding: "0.5vh 0 3vh 0",
+              paddingBottom: "3vh",
             }}
           >
             {(27.965).toFixed(2)}
@@ -214,22 +209,21 @@ export const CollectionTable = () => {
           style={{
             width: "16vw",
             height: "fit-content",
+            textAlign: "center",
           }}
         >
-          <Text
+          <Image
             style={{
-              textAlign: "center",
-              overflowWrap: "break-word",
-              padding: "3vh 2vw 0 2vw",
+              width: "8vw",
+              padding: "3.5vh 2vw 0.5vh 2vw",
             }}
-          >
-            Sol
-          </Text>
+            src={"https://cryptologos.cc/logos/solana-sol-logo.png"}
+          />
           <Text
             style={{
               textAlign: "center",
               overflowWrap: "break-word",
-              padding: "0.5vh 0 3vh 0",
+              paddingBottom: "3vh",
             }}
           >
             {(2649.694 / 1000).toFixed(2)}K
