@@ -8,7 +8,6 @@ import { Home } from "./pages/home";
 ReactXnft.events.on("connect", () => {
   // no-op
 });
-
 export function App() {
   return <Home />;
 }

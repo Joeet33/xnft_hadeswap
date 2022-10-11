@@ -2,7 +2,7 @@ import React from "react";
 import { Image, List, ListItem, Text } from "react-xnft";
 import MockData from "../../utils/mockData.json";
 
-export const CollectionTable = () => {
+export const CollectionTable = (props) => {
   return (
     <>
       <List
@@ -97,7 +97,15 @@ export const CollectionTable = () => {
         </ListItem>
       </List>
 
-      {MockData.map((listItem) => {
+      {MockData.filter((listItem) => {
+        if (props.query === "") {
+          return listItem;
+        } else if (
+          listItem.name.toLowerCase().includes(props.query.toLowerCase())
+        ) {
+          return listItem;
+        }
+      }).map((listItem) => {
         const tvl = parseInt(listItem.tvl) / 1000;
         return (
           <List

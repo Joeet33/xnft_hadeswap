@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Button,
   List,
@@ -9,15 +9,19 @@ import {
   View,
 } from "react-xnft";
 import { CollectionTable } from "../../components/collectionTable";
+import { SearchBar } from "../../components/searchBar";
 
 export const Collections = () => {
+
+  const [query, setQuery] = useState<string>("");
+
   return (
     <View>
       <Text>Collections</Text>
       <Button>+ create pool</Button>
-      <TextField>Search by collection name</TextField>
+      <SearchBar setQuery={setQuery}/>
       <View>
-        <CollectionTable />
+        <CollectionTable query={query}/>
       </View>
     </View>
   );
