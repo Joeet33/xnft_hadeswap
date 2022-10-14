@@ -22,7 +22,7 @@ export const CollectionTable = (props) => {
         "https://hadeswap-api.herokuapp.com/markets"
       );
       const data = await response.json();
-      setMarkets(data.slice(0, 7));
+      setMarkets(data.slice(0, 10));
     };
     fetchData();
   }, []);
@@ -39,7 +39,7 @@ export const CollectionTable = (props) => {
               justifyContent: "space-between",
               margin: "auto",
               width: "95vw",
-              marginTop: "1vh",
+              marginTop: "3vh",
             }}
             key={i}
           >
@@ -88,7 +88,7 @@ export const CollectionTable = (props) => {
                 margin: "auto",
                 width: "95vw",
                 marginTop: "1vh",
-                paddingTop:"4vh",
+                paddingTop: "4vh",
               }}
               key={i}
             >
@@ -118,7 +118,7 @@ export const CollectionTable = (props) => {
                     webkitLineClamp: "2",
                     webkitBoxOrient: "vertical",
                     paddingLeft: "1vw",
-                    paddingBottom:"8.5vh"
+                    paddingBottom: "8.5vh",
                   }}
                 >
                   {listItem.collectionName}
@@ -129,7 +129,6 @@ export const CollectionTable = (props) => {
                   width: "20vw",
                   height: "fit-content",
                   textAlign: "center",
-                  // padding: "1vh 1vh",
                 }}
               >
                 <Image
@@ -152,7 +151,6 @@ export const CollectionTable = (props) => {
                   width: "20vw",
                   height: "fit-content",
                   textAlign: "center",
-                  // padding: "1vh 1vh",
                 }}
               >
                 <Image
@@ -175,7 +173,6 @@ export const CollectionTable = (props) => {
                   width: "20vw",
                   height: "fit-content",
                   textAlign: "center",
-                  // padding: "1vh 1vh",
                 }}
               >
                 <Image
@@ -198,7 +195,6 @@ export const CollectionTable = (props) => {
                   width: "20vw",
                   height: "fit-content",
                   textAlign: "center",
-                  // padding: "1vh 1vh",
                 }}
               >
                 <Image

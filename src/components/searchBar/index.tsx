@@ -7,8 +7,12 @@ export const SearchBar = (props) => {
   };
 
   return (
-    <View>
-      <TextField placeholder="Enter Post Title" onChange={handleChange} />
-    </View>
+    <TextField
+      style={{
+        width: "45vw",
+      }}
+      placeholder="Enter Collection"
+      onChange={handleChange}
+    />
   );
 };
