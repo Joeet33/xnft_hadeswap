@@ -51,7 +51,6 @@ export function Navigation() {
         background: "transparent",
         borderTop: "none",
       }}
-      disableScroll
     >
       <Tab.Screen
         name="collections"

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Image, List, ListItem, Text } from "react-xnft";
+import { Image, List, ListItem, Text, View } from "react-xnft";
 import TableNames from "../../utils/tableNames..json";
 
 interface Props {
@@ -22,7 +22,7 @@ export const CollectionTable = (props) => {
         "https://hadeswap-api.herokuapp.com/markets"
       );
       const data = await response.json();
-      setMarkets(data);
+      setMarkets(data.slice(0, 7));
     };
     fetchData();
   }, []);
@@ -30,7 +30,7 @@ export const CollectionTable = (props) => {
   console.log("testdata", markets);
 
   return (
-    <>
+    <View>
       {TableNames?.map((listItem, i) => {
         return (
           <List
@@ -80,7 +80,6 @@ export const CollectionTable = (props) => {
           }
         })
         .map((listItem, i) => {
-          if (i > 5) return;
           return (
             <List
               style={{
@@ -89,6 +88,7 @@ export const CollectionTable = (props) => {
                 margin: "auto",
                 width: "95vw",
                 marginTop: "1vh",
+                paddingTop:"4vh",
               }}
               key={i}
             >
@@ -97,20 +97,20 @@ export const CollectionTable = (props) => {
                   width: "20vw",
                   height: "fit-content",
                   textAlign: "center",
-                  paddingBottom: "1vh",
                 }}
               >
                 <Image
                   style={{
-                    width: "12vw",
-                    padding: "3.5vh 2vw 0.5vh 2vw",
+                    width: "8vw",
+                    borderRadius: "5vw",
                   }}
                   src={listItem.collectionImage}
                 />
+
                 <Text
                   style={{
                     textAlign: "center",
-                    overflowY: "hidden",
+                    overflow: "hidden",
                     overflowWrap: "break-word",
                     height: "8vh",
                     textOverflow: "ellipsis",
@@ -118,6 +118,7 @@ export const CollectionTable = (props) => {
                     webkitLineClamp: "2",
                     webkitBoxOrient: "vertical",
                     paddingLeft: "1vw",
+                    paddingBottom:"8.5vh"
                   }}
                 >
                   {listItem.collectionName}
@@ -128,12 +129,12 @@ export const CollectionTable = (props) => {
                   width: "20vw",
                   height: "fit-content",
                   textAlign: "center",
+                  // padding: "1vh 1vh",
                 }}
               >
                 <Image
                   style={{
-                    width: "12vw",
-                    padding: "3.5vh 2vw 0.5vh 2vw",
+                    width: "8vw",
                   }}
                   src={"https://cryptologos.cc/logos/solana-sol-logo.png"}
                 />
@@ -141,7 +142,6 @@ export const CollectionTable = (props) => {
                   style={{
                     textAlign: "center",
                     overflowWrap: "break-word",
-                    paddingBottom: "3vh",
                   }}
                 >
                   {listItem.listingsAmount}
@@ -152,12 +152,12 @@ export const CollectionTable = (props) => {
                   width: "20vw",
                   height: "fit-content",
                   textAlign: "center",
+                  // padding: "1vh 1vh",
                 }}
               >
                 <Image
                   style={{
-                    width: "12vw",
-                    padding: "3.5vh 2vw 0.5vh 2vw",
+                    width: "8vw",
                   }}
                   src={"https://cryptologos.cc/logos/solana-sol-logo.png"}
                 />
@@ -165,7 +165,6 @@ export const CollectionTable = (props) => {
                   style={{
                     textAlign: "center",
                     overflowWrap: "break-word",
-                    paddingBottom: "3vh",
                   }}
                 >
                   {parseFloat(listItem.floorPrice).toFixed(2)}
@@ -176,12 +175,12 @@ export const CollectionTable = (props) => {
                   width: "20vw",
                   height: "fit-content",
                   textAlign: "center",
+                  // padding: "1vh 1vh",
                 }}
               >
                 <Image
                   style={{
-                    width: "12vw",
-                    padding: "3.5vh 2vw 0.5vh 2vw",
+                    width: "8vw",
                   }}
                   src={"https://cryptologos.cc/logos/solana-sol-logo.png"}
                 />
@@ -189,7 +188,6 @@ export const CollectionTable = (props) => {
                   style={{
                     textAlign: "center",
                     overflowWrap: "break-word",
-                    paddingBottom: "3vh",
                   }}
                 >
                   {parseFloat(listItem.bestoffer).toFixed(2)}
@@ -200,12 +198,12 @@ export const CollectionTable = (props) => {
                   width: "20vw",
                   height: "fit-content",
                   textAlign: "center",
+                  // padding: "1vh 1vh",
                 }}
               >
                 <Image
                   style={{
-                    width: "12vw",
-                    padding: "3.5vh 2vw 0.5vh 2vw",
+                    width: "8vw",
                   }}
                   src={"https://cryptologos.cc/logos/solana-sol-logo.png"}
                 />
@@ -213,7 +211,6 @@ export const CollectionTable = (props) => {
                   style={{
                     textAlign: "center",
                     overflowWrap: "break-word",
-                    paddingBottom: "3vh",
                   }}
                 >
                   {`${(parseFloat(listItem.offerTVL) / 1000).toFixed(2)}K`}
@@ -222,6 +219,6 @@ export const CollectionTable = (props) => {
             </List>
           );
         })}
-    </>
+    </View>
   );
 };
