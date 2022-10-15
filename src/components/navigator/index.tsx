@@ -1,6 +1,6 @@
 import React from "react";
 import ReactXnft, { Tab, Text } from "react-xnft";
-import { Home } from "../../pages/home";
+import { Home } from "../../pages/route";
 import { CollectionList } from "../../pages/collectionList";
 import { Pools } from "../../pages/pools";
 import { THEME } from "../../utils/theme";

@@ -1,6 +1,6 @@
 import React from "react";
 import ReactXnft, { Button, Tab, Text, useNavigation } from "react-xnft";
-import { Home } from "./pages/home";
+import { Home } from "./pages/route";
 
 //
 // On connection to the host environment, warm the cache.

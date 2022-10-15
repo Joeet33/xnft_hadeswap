@@ -1,25 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { Image, List, ListItem, Text, useNavigation, View } from "react-xnft";
+import { CollectionListType } from "../../interface/collectionListTypes";
 import TableNames from "../../utils/tableNames..json";
 
-interface Props {
-  marketPubkey: string;
-  collectionName: string;
-  collectionImage: string;
-  listingsAmount: number;
-  floorPrice: string;
-  bestoffer: string;
-  offerTVL: string;
-  nftValidationAdapter: string;
-}
-
 export const CollectionTable = (props) => {
-  const [markets, setMarkets] = useState<Props[]>();
+  const [markets, setMarkets] = useState<CollectionListType[]>();
 
   const nav = useNavigation();
 
-  const onClickHandler = () => {
-    nav.push("collection");
+  const onClickHandler = (collection: CollectionListType) => {
+    nav.push("collection", { ...collection });
   };
 
   useEffect(() => {
@@ -104,7 +94,7 @@ export const CollectionTable = (props) => {
                   marginTop: "1vh",
                   paddingTop: "4vh",
                 }}
-                onClick={onClickHandler}
+                onClick={() => onClickHandler(listItem)}
               >
                 <ListItem
                   style={{

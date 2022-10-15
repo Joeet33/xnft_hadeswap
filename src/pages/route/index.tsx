@@ -1,6 +1,6 @@
 import React from "react";
 import { Stack } from "react-xnft";
-import {  Trade } from "../../components/trade";
+import { Trade } from "../../components/trade";
 import { Navigation } from "../../components/navigator";
 import { Collection } from "../collection";
 
@@ -18,7 +18,7 @@ export const Home = () => {
             return {
               title: "HadeSwap",
             };
-            case "collection":
+          case "collection":
             return {
               title: "HadeSwap",
             };
@@ -32,8 +32,5 @@ export const Home = () => {
       <Stack.Screen name={"navigation"} component={() => <Navigation />} />
       <Stack.Screen name={"collection"} component={() => <Collection />} />
     </Stack.Navigator>
-    // <>
-    // <Trade />
-    // </>
   );
 };
