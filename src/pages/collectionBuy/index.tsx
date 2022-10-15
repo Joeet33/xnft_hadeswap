@@ -3,13 +3,14 @@ import { Text, useNavigation, View } from "react-xnft";
 import { CollectionListTab } from "../../tabs/collectionListTab";
 import { CollectionListType } from "../../interface/collectionListTypes";
 import { PairType } from "../../interface/pairTypes";
+import { CollectionHeader } from "../../components/collectionHeader";
 
 export const CollectionBuy = () => {
   const nav = useNavigation();
   const [markets, setMarkets] = useState<CollectionListType>();
   const [pairs, setPairs] = useState<PairType[]>();
 
-  const { marketPubkey, collectionName }: CollectionListType =
+  const { marketPubkey }: CollectionListType =
     nav.activeRoute.props;
 
   useEffect(() => {
@@ -36,7 +37,7 @@ export const CollectionBuy = () => {
 
   return (
     <>
-      <Text>{collectionName}</Text>
+      <CollectionHeader />
     </>
   );
 };
