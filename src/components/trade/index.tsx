@@ -21,7 +21,7 @@ export const Trade = () => {
           style={{
             padding: "5vw",
             marginRight: "2vw",
-            borderRadius:"2vw",
+            borderRadius: "2vw",
             backgroundColor: "darkblue",
           }}
         >
@@ -31,18 +31,22 @@ export const Trade = () => {
           style={{
             padding: "5vw",
             marginLeft: "2vw",
-            borderRadius:"2vw",
+            borderRadius: "2vw",
             backgroundColor: "darkblue",
           }}
         >
           All time volume
         </Text>
       </View>
-      <Text style={{padding: "5vw",
-       width:"50%",
-       margin:"auto",
-            borderRadius:"2vw",
-            backgroundColor: "darkblue", }}>
+      <Text
+        style={{
+          padding: "5vw",
+          width: "50%",
+          margin: "auto",
+          borderRadius: "2vw",
+          backgroundColor: "darkblue",
+        }}
+      >
         Total value locked
       </Text>
       <Text style={{ padding: "3vh 4vw 4vh 4vw" }}>

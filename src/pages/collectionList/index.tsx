@@ -3,6 +3,7 @@ import {
   Button,
   List,
   ListItem,
+  Stack,
   Table,
   Text,
   TextField,
@@ -10,8 +11,9 @@ import {
 } from "react-xnft";
 import { CollectionTable } from "../../components/collectionTable";
 import { SearchBar } from "../../components/searchBar";
+import { Collection } from "../collection";
 
-export const Collections = () => {
+export const CollectionList = () => {
   const [query, setQuery] = useState<string>("");
 
   return (
@@ -26,7 +28,7 @@ export const Collections = () => {
       >
         <SearchBar setQuery={setQuery} />
         <Button style={{ marginLeft: "auto" }}>Create Pool</Button>
-      </View>
+      </View> 
       <View>
         <CollectionTable query={query} />
       </View>

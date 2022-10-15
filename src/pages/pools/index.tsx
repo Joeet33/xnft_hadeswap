@@ -1,10 +1,16 @@
 import React from "react";
-import { Text, View } from "react-xnft";
+import { Button, Text, View } from "react-xnft";
 
 export const Pools = () => {
   return (
-    <View>
-      <Text>pools</Text>
+    <View
+      style={{
+        textAlign:"center",
+        marginTop:"50%"
+      }}
+    >
+      <Button>Create Pool</Button>
+      <Text style={{paddingTop:"5vh"}}>No pools Found</Text>
     </View>
   );
 };

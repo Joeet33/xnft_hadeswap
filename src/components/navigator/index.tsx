@@ -1,7 +1,7 @@
 import React from "react";
 import ReactXnft, { Tab, Text } from "react-xnft";
 import { Home } from "../../pages/home";
-import { Collections } from "../../pages/collections";
+import { CollectionList } from "../../pages/collectionList";
 import { Pools } from "../../pages/pools";
 import { THEME } from "../../utils/theme";
 
@@ -55,7 +55,7 @@ export function Navigation() {
       <Tab.Screen
         name="collections"
         disableLabel={true}
-        component={() => <Collections />}
+        component={() => <CollectionList />}
       />
       <Tab.Screen
         name="pools"
