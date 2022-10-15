@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Image, List, ListItem, Text, View } from "react-xnft";
+import { Image, List, ListItem, Text, useNavigation, View } from "react-xnft";
 import TableNames from "../../utils/tableNames..json";
 
 interface Props {
@@ -15,6 +15,12 @@ interface Props {
 
 export const CollectionTable = (props) => {
   const [markets, setMarkets] = useState<Props[]>();
+
+  const nav = useNavigation();
+
+  const onClickHandler = () => {
+    nav.push("collection");
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -84,134 +90,143 @@ export const CollectionTable = (props) => {
             <List
               style={{
                 display: "flex",
-                justifyContent: "space-between",
                 margin: "auto",
                 width: "95vw",
                 marginTop: "1vh",
-                paddingTop: "4vh",
               }}
               key={i}
             >
-              <ListItem
+              <View
                 style={{
-                  width: "20vw",
-                  height: "fit-content",
-                  textAlign: "center",
+                  display: "flex",
+                  margin: "auto",
+                  width: "95vw",
+                  marginTop: "1vh",
+                  paddingTop: "4vh",
                 }}
+                onClick={onClickHandler}
               >
-                <Image
+                <ListItem
                   style={{
-                    width: "8vw",
-                    borderRadius: "5vw",
+                    width: "20vw",
+                    height: "fit-content",
+                    textAlign: "center",
                   }}
-                  src={listItem.collectionImage}
-                />
+                >
+                  <Image
+                    style={{
+                      width: "8vw",
+                      borderRadius: "5vw",
+                    }}
+                    src={listItem.collectionImage}
+                  />
 
-                <Text
+                  <Text
+                    style={{
+                      textAlign: "center",
+                      overflow: "hidden",
+                      overflowWrap: "break-word",
+                      height: "8vh",
+                      textOverflow: "ellipsis",
+                      display: "-webkit-box",
+                      webkitLineClamp: "2",
+                      webkitBoxOrient: "vertical",
+                      paddingLeft: "1vw",
+                      paddingBottom: "8.5vh",
+                    }}
+                  >
+                    {listItem.collectionName}
+                  </Text>
+                </ListItem>
+                <ListItem
                   style={{
+                    width: "20vw",
+                    height: "fit-content",
                     textAlign: "center",
-                    overflow: "hidden",
-                    overflowWrap: "break-word",
-                    height: "8vh",
-                    textOverflow: "ellipsis",
-                    display: "-webkit-box",
-                    webkitLineClamp: "2",
-                    webkitBoxOrient: "vertical",
-                    paddingLeft: "1vw",
-                    paddingBottom: "8.5vh",
                   }}
                 >
-                  {listItem.collectionName}
-                </Text>
-              </ListItem>
-              <ListItem
-                style={{
-                  width: "20vw",
-                  height: "fit-content",
-                  textAlign: "center",
-                }}
-              >
-                <Image
+                  <Image
+                    style={{
+                      width: "8vw",
+                    }}
+                    src={"https://cryptologos.cc/logos/solana-sol-logo.png"}
+                  />
+                  <Text
+                    style={{
+                      textAlign: "center",
+                      overflowWrap: "break-word",
+                    }}
+                  >
+                    {listItem.listingsAmount}
+                  </Text>
+                </ListItem>
+                <ListItem
                   style={{
-                    width: "8vw",
-                  }}
-                  src={"https://cryptologos.cc/logos/solana-sol-logo.png"}
-                />
-                <Text
-                  style={{
+                    width: "20vw",
+                    height: "fit-content",
                     textAlign: "center",
-                    overflowWrap: "break-word",
                   }}
                 >
-                  {listItem.listingsAmount}
-                </Text>
-              </ListItem>
-              <ListItem
-                style={{
-                  width: "20vw",
-                  height: "fit-content",
-                  textAlign: "center",
-                }}
-              >
-                <Image
+                  <Image
+                    style={{
+                      width: "8vw",
+                    }}
+                    src={"https://cryptologos.cc/logos/solana-sol-logo.png"}
+                  />
+                  <Text
+                    style={{
+                      textAlign: "center",
+                      overflowWrap: "break-word",
+                    }}
+                  >
+                    {parseFloat(listItem.floorPrice).toFixed(2)}
+                  </Text>
+                </ListItem>
+                <ListItem
                   style={{
-                    width: "8vw",
-                  }}
-                  src={"https://cryptologos.cc/logos/solana-sol-logo.png"}
-                />
-                <Text
-                  style={{
+                    width: "20vw",
+                    height: "fit-content",
                     textAlign: "center",
-                    overflowWrap: "break-word",
                   }}
                 >
-                  {parseFloat(listItem.floorPrice).toFixed(2)}
-                </Text>
-              </ListItem>
-              <ListItem
-                style={{
-                  width: "20vw",
-                  height: "fit-content",
-                  textAlign: "center",
-                }}
-              >
-                <Image
+                  <Image
+                    style={{
+                      width: "8vw",
+                    }}
+                    src={"https://cryptologos.cc/logos/solana-sol-logo.png"}
+                  />
+                  <Text
+                    style={{
+                      textAlign: "center",
+                      overflowWrap: "break-word",
+                    }}
+                  >
+                    {parseFloat(listItem.bestoffer).toFixed(2)}
+                  </Text>
+                </ListItem>
+                <ListItem
                   style={{
-                    width: "8vw",
-                  }}
-                  src={"https://cryptologos.cc/logos/solana-sol-logo.png"}
-                />
-                <Text
-                  style={{
+                    width: "20vw",
+                    height: "fit-content",
                     textAlign: "center",
-                    overflowWrap: "break-word",
                   }}
                 >
-                  {parseFloat(listItem.bestoffer).toFixed(2)}
-                </Text>
-              </ListItem>
-              <ListItem
-                style={{
-                  width: "20vw",
-                  height: "fit-content",
-                  textAlign: "center",
-                }}
-              >
-                <Image
-                  style={{
-                    width: "8vw",
-                  }}
-                  src={"https://cryptologos.cc/logos/solana-sol-logo.png"}
-                />
-                <Text
-                  style={{
-                    textAlign: "center",
-                    overflowWrap: "break-word",
-                  }}
-                >
-                  {`${(parseFloat(listItem.offerTVL) / 1000).toFixed(2)}K`}
-                </Text>
-              </ListItem>
+                  <Image
+                    style={{
+                      width: "8vw",
+                    }}
+                    src={"https://cryptologos.cc/logos/solana-sol-logo.png"}
+                  />
+                  <Text
+                    style={{
+                      textAlign: "center",
+                      overflowWrap: "break-word",
+                    }}
+                  >
+                    {`${(parseFloat(listItem.offerTVL) / 1000).toFixed(2)}K`}
+                  </Text>
+                </ListItem>
+              </View>
             </List>
           );
         })}

@@ -7,6 +7,7 @@ import {
   Table,
   Text,
   TextField,
+  useNavigation,
   View,
 } from "react-xnft";
 import { CollectionTable } from "../../components/collectionTable";
