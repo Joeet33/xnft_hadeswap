@@ -5,7 +5,7 @@ export const Trade = () => {
   const nav = useNavigation();
 
   const onClickHandler = () => {
-    nav.push("navigation");
+    nav.push("collectionListTab");
   };
 
   return (

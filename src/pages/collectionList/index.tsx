@@ -12,7 +12,6 @@ import {
 } from "react-xnft";
 import { CollectionTable } from "../../components/collectionTable";
 import { SearchBar } from "../../components/searchBar";
-import { Collection } from "../collection";
 
 export const CollectionList = () => {
   const [query, setQuery] = useState<string>("");

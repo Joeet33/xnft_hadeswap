@@ -9,7 +9,7 @@ export const CollectionTable = (props) => {
   const nav = useNavigation();
 
   const onClickHandler = (collection: CollectionListType) => {
-    nav.push("collection", { ...collection });
+    nav.push("collectionTab", { ...collection });
   };
 
   useEffect(() => {

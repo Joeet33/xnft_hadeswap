@@ -1,10 +1,10 @@
 import React from "react";
 import { Stack } from "react-xnft";
 import { Trade } from "../../components/trade";
-import { Navigation } from "../../components/navigator";
-import { Collection } from "../collection";
+import { CollectionListTab } from "../../tabs/collectionListTab";
+import { CollectionTab } from "../../tabs/collectionTab";
 
-export const Home = () => {
+export const Route = () => {
   return (
     <Stack.Navigator
       initialRoute={{ name: "trade" }}
@@ -14,11 +14,11 @@ export const Home = () => {
             return {
               title: "HadeSwap",
             };
-          case "navigation":
+          case "collectionListTab":
             return {
               title: "HadeSwap",
             };
-          case "collection":
+          case "collectionTab":
             return {
               title: "HadeSwap",
             };
@@ -29,8 +29,8 @@ export const Home = () => {
       style={{}}
     >
       <Stack.Screen name={"trade"} component={() => <Trade />} />
-      <Stack.Screen name={"navigation"} component={() => <Navigation />} />
-      <Stack.Screen name={"collection"} component={() => <Collection />} />
+      <Stack.Screen name={"collectionListTab"} component={() => <CollectionListTab />} />
+      <Stack.Screen name={"collectionTab"} component={() => <CollectionTab />} />
     </Stack.Navigator>
   );
 };
