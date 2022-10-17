@@ -1,5 +1,5 @@
 import React from "react";
-import ReactXnft, { Button, Tab, Text, useNavigation } from "react-xnft";
+import ReactXnft from "react-xnft";
 import { Route } from "./pages/route";
 
 //

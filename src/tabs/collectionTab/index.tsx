@@ -1,5 +1,5 @@
 import React from "react";
-import ReactXnft, { Tab, Text } from "react-xnft";
+import { Tab, Text } from "react-xnft";
 import { THEME } from "../../utils/theme";
 import { CollectionBuy } from "../../pages/collectionBuy";
 import { CollectionSell } from "../../pages/collectionSell";
@@ -26,7 +26,7 @@ export function CollectionTab() {
                     Buy
                   </Text>
                 );
-                case "collectionSell":
+              case "collectionSell":
                 return (
                   <Text
                     style={{
@@ -39,7 +39,7 @@ export function CollectionTab() {
                     Sell
                   </Text>
                 );
-                case "collectionActivity":
+              case "collectionActivity":
                 return (
                   <Text
                     style={{
@@ -48,8 +48,8 @@ export function CollectionTab() {
                       textAlign: "center",
                       color: THEME.colors.textSecondary,
                     }}
-                  >Activity
-                    
+                  >
+                    Activity
                   </Text>
                 );
               case "collectionPools":

@@ -1,5 +1,5 @@
 import React from "react";
-import { TextField, View } from "react-xnft";
+import { TextField } from "react-xnft";
 
 export const SearchBar = (props) => {
   const handleChange = (e): any => {

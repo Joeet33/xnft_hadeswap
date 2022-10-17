@@ -1,15 +1,5 @@
 import React, { useState } from "react";
-import {
-  Button,
-  List,
-  ListItem,
-  Stack,
-  Table,
-  Text,
-  TextField,
-  useNavigation,
-  View,
-} from "react-xnft";
+import { Button, View } from "react-xnft";
 import { CollectionTable } from "../../components/collectionTable";
 import { SearchBar } from "../../components/searchBar";
 
@@ -28,7 +18,7 @@ export const CollectionList = () => {
       >
         <SearchBar setQuery={setQuery} />
         <Button style={{ marginLeft: "auto" }}>Create Pool</Button>
-      </View> 
+      </View>
       <View>
         <CollectionTable query={query} />
       </View>

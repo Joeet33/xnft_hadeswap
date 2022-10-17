@@ -19,7 +19,7 @@ export const CollectionHeader = () => {
         textAlign: "center",
         borderBottom: "1px solid #bbb",
         borderRadius: "2vw",
-        paddingBottom:"2vh"
+        paddingBottom: "2vh",
       }}
     >
       <Image

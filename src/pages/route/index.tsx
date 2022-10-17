@@ -29,8 +29,14 @@ export const Route = () => {
       style={{}}
     >
       <Stack.Screen name={"trade"} component={() => <Trade />} />
-      <Stack.Screen name={"collectionListTab"} component={() => <CollectionListTab />} />
-      <Stack.Screen name={"collectionTab"} component={() => <CollectionTab />} />
+      <Stack.Screen
+        name={"collectionListTab"}
+        component={() => <CollectionListTab />}
+      />
+      <Stack.Screen
+        name={"collectionTab"}
+        component={() => <CollectionTab />}
+      />
     </Stack.Navigator>
   );
 };
